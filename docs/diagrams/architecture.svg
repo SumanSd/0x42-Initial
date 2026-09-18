@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1420" viewBox="0 0 1800 1420">
+<title>Skill Erosion Tracker - target architecture</title>
+<desc>Two user interfaces and CSV JSON input connect to an orchestrator. Four FastMCP agents share versioned traces, embeddings, and curated resources. These are planned integrations.</desc>
+<rect width="1800" height="1420" fill="#F5F7FA"/>
+<text x="60" y="58.58" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="700" fill="#167A71">SKILL EROSION TRACKER</text>
+<text x="60" y="117.25999999999999" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="43" font-weight="700" fill="#172B42">Four agents. One longitudinal learning record.</text>
+<text x="60" y="160.86" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="400" fill="#516379">Target architecture from the submitted proposal  |  Starter interfaces exist; integrations remain to implement.</text>
+<rect x="60" y="210" width="530" height="184" rx="16" fill="#FFFFFF" stroke="#B9C7D5" stroke-width="2"/>
+<text x="84" y="246.76" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="700" fill="#167A71">TEACHER VIEW</text>
+<text x="84" y="288.14" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="700" fill="#172B42">Trends and intervention summary</text>
+<text x="84" y="330.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">Assisted vs. unassisted performance</text>
+<text x="84" y="361.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">Evidence sufficiency and skill history</text>
+<rect x="635" y="210" width="530" height="184" rx="16" fill="#FFFFFF" stroke="#B9C7D5" stroke-width="2"/>
+<text x="659" y="246.76" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="700" fill="#167A71">STUDENT VIEW</text>
+<text x="659" y="288.14" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="700" fill="#172B42">Targeted practice and resources</text>
+<text x="659" y="330.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">An exercise for the specific misconception</text>
+<text x="659" y="361.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">Follow-up attempt at the next checkpoint</text>
+<rect x="1210" y="210" width="530" height="184" rx="16" fill="#FFFFFF" stroke="#B9C7D5" stroke-width="2"/>
+<text x="1234" y="246.76" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="700" fill="#3863A5">PILOT INPUT</text>
+<text x="1234" y="288.14" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="700" fill="#172B42">CSV / JSON submission history</text>
+<text x="1234" y="330.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">Code, written responses, quiz attempts</text>
+<text x="1234" y="361.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">Skill, time, task set, assistance condition</text>
+<polyline points="325,394 325,468" fill="none" stroke="#3863A5" stroke-width="3"/>
+<polygon points="325,468 318.7674679981454,456.5914266954252 331.2325320018546,456.5914266954251" fill="#3863A5"/>
+<polygon points="325,394 331.2325320018546,405.4085733045749 318.7674679981454,405.4085733045748" fill="#3863A5"/>
+<polyline points="900,394 900,468" fill="none" stroke="#3863A5" stroke-width="3"/>
+<polygon points="900,468 893.7674679981453,456.5914266954252 906.2325320018547,456.5914266954251" fill="#3863A5"/>
+<polygon points="900,394 906.2325320018547,405.4085733045749 893.7674679981453,405.4085733045748" fill="#3863A5"/>
+<polyline points="1475,394 1475,468" fill="none" stroke="#3863A5" stroke-width="3"/>
+<polygon points="1475,468 1468.7674679981453,456.5914266954252 1481.2325320018547,456.5914266954251" fill="#3863A5"/>
+<text x="355" y="434.76" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#3863A5">Requests / results</text>
+<text x="930" y="434.76" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#3863A5">Requests / results</text>
+<text x="1502" y="434.76" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#3863A5">Normalize input</text>
+<rect x="60" y="470" width="1680" height="118" rx="16" fill="#E8F1F8" stroke="#A5BCD4" stroke-width="2"/>
+<text x="88" y="507.76" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="700" fill="#3863A5">ORCHESTRATION LAYER</text>
+<text x="88" y="553.78" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="29" font-weight="700" fill="#172B42">MCP client  /  tool sequencing  /  typed results  /  partial failures and sparse evidence</text>
+<polyline points="900,588 900,650" fill="none" stroke="#3863A5" stroke-width="3"/>
+<polygon points="900,650 893.7674679981453,638.5914266954252 906.2325320018547,638.5914266954252" fill="#3863A5"/>
+<polygon points="900,588 906.2325320018547,599.4085733045748 893.7674679981453,599.4085733045748" fill="#3863A5"/>
+<text x="926" y="624.58" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="400" fill="#3863A5">Tool calls / results</text>
+<rect x="60" y="650" width="1680" height="294" rx="16" fill="#EAF4F1" stroke="#9CC3B9" stroke-width="2"/>
+<text x="85" y="690.4" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="700" fill="#167A71">FASTMCP SERVER  /  FOUR INDEPENDENTLY CALLABLE TOOLS</text>
+<rect x="85" y="720" width="370" height="178" rx="16" fill="#FFFFFF" stroke="#B9C7D5" stroke-width="2"/>
+<text x="109" y="756.76" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="700" fill="#167A71">01  TRACE COLLECTOR</text>
+<text x="109" y="798.14" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="700" fill="#172B42">Validate and version</text>
+<text x="109" y="840.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">Normalize and persist attempts</text>
+<text x="109" y="871.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">Attach metadata and embeddings</text>
+<rect x="505" y="720" width="370" height="178" rx="16" fill="#FFFFFF" stroke="#B9C7D5" stroke-width="2"/>
+<text x="529" y="756.76" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="700" fill="#167A71">02  DIVERGENCE SCORER</text>
+<text x="529" y="798.14" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="700" fill="#172B42">Measure the gap</text>
+<text x="529" y="840.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">Matched checkpoint pairs</text>
+<text x="529" y="871.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">Structured features + ensemble</text>
+<rect x="925" y="720" width="370" height="178" rx="16" fill="#FFFFFF" stroke="#B9C7D5" stroke-width="2"/>
+<text x="949" y="756.76" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="700" fill="#167A71">03  MISCONCEPTION CLUSTERER</text>
+<text x="949" y="798.14" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="700" fill="#172B42">Find recurring concepts</text>
+<text x="949" y="840.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">Semantic groups of weak work</text>
+<text x="949" y="871.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">Retain attempt evidence</text>
+<rect x="1345" y="720" width="370" height="178" rx="16" fill="#FFFFFF" stroke="#B9C7D5" stroke-width="2"/>
+<text x="1369" y="756.76" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="700" fill="#167A71">04  REMEDIATION AGENT</text>
+<text x="1369" y="798.14" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="700" fill="#172B42">Retrieve a next step</text>
+<text x="1369" y="840.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">RAG for the specific cluster</text>
+<text x="1369" y="871.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">Teacher + student outputs</text>
+<polyline points="455,808 505,808" fill="none" stroke="#167A71" stroke-width="3"/>
+<polygon points="505,808 493.5914266954251,814.2325320018547 493.5914266954251,801.7674679981453" fill="#167A71"/>
+<polyline points="875,808 925,808" fill="none" stroke="#167A71" stroke-width="3"/>
+<polygon points="925,808 913.5914266954252,814.2325320018547 913.5914266954252,801.7674679981453" fill="#167A71"/>
+<polyline points="1295,808 1345,808" fill="none" stroke="#167A71" stroke-width="3"/>
+<polygon points="1345,808 1333.591426695425,814.2325320018547 1333.591426695425,801.7674679981453" fill="#167A71"/>
+<text x="85" y="929.76" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#167A71">Arrows show the initial execution sequence. Agents share scoped history; each remains separately testable.</text>
+<polyline points="270,944 270,1020" fill="none" stroke="#167A71" stroke-width="3"/>
+<polygon points="270,1020 263.7674679981454,1008.5914266954252 276.2325320018546,1008.5914266954252" fill="#167A71"/>
+<polyline points="690,944 690,976 410,976 410,1020" fill="none" stroke="#167A71" stroke-width="3"/>
+<polygon points="410,1020 403.7674679981454,1008.5914266954252 416.2325320018546,1008.5914266954252" fill="#167A71"/>
+<polyline points="1110,944 1110,988 900,988 900,1020" fill="none" stroke="#167A71" stroke-width="3"/>
+<polygon points="900,1020 893.7674679981453,1008.5914266954252 906.2325320018547,1008.5914266954252" fill="#167A71"/>
+<polyline points="1530,944 1530,1020" fill="none" stroke="#167A71" stroke-width="3"/>
+<polygon points="1530,1020 1523.7674679981453,1008.5914266954252 1536.2325320018547,1008.5914266954252" fill="#167A71"/>
+<rect x="60" y="1020" width="530" height="203" rx="16" fill="#FFFFFF" stroke="#B9C7D5" stroke-width="2"/>
+<text x="84" y="1056.76" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="700" fill="#3863A5">CANONICAL HISTORY</text>
+<text x="84" y="1098.14" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="700" fill="#172B42">Versioned trace store</text>
+<text x="84" y="1140.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">SQLite: attempts and immutable revisions</text>
+<text x="84" y="1171.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">Scores, features and evidence provenance</text>
+<text x="84" y="1202.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">Planned adapter; durable source of truth</text>
+<rect x="635" y="1020" width="530" height="203" rx="16" fill="#FFFFFF" stroke="#B9C7D5" stroke-width="2"/>
+<text x="659" y="1056.76" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="700" fill="#3863A5">SEMANTIC MEMORY</text>
+<text x="659" y="1098.14" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="700" fill="#172B42">Sentence encoder + Chroma</text>
+<text x="659" y="1140.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">Attempt embeddings and scoped metadata</text>
+<text x="659" y="1171.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">Student / skill / version / model filters</text>
+<text x="659" y="1202.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">Collector writes; clusterer queries</text>
+<rect x="1210" y="1020" width="530" height="203" rx="16" fill="#FFFFFF" stroke="#B9C7D5" stroke-width="2"/>
+<text x="1234" y="1056.76" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="700" fill="#3863A5">REMEDIATION KNOWLEDGE</text>
+<text x="1234" y="1098.14" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="700" fill="#172B42">Small curated resource library</text>
+<text x="1234" y="1140.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">Concept-specific explanations + exercises</text>
+<text x="1234" y="1171.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">Separate resource embedding collection</text>
+<text x="1234" y="1202.04" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#516379">Return resource IDs with suggestions</text>
+<rect x="60" y="1270" width="1680" height="94" rx="16" fill="#172B42" stroke="#172B42" stroke-width="2"/>
+<text x="88" y="1305.76" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="700" fill="#A7DED2">PILOT GUARDRAILS</text>
+<text x="88" y="1342.86" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="400" fill="#FFFFFF">3+ paired checkpoints for a trend  |  Explicit insufficient-data state  |  Synthetic samples  |  No raw submission text in logs</text>
+<text x="60" y="1398.76" font-family="Segoe UI,DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#516379">Streamlit and SQLite are starter choices. FastMCP, semantic memory, four agents, and separate audiences come from the proposal.</text>
+</svg>

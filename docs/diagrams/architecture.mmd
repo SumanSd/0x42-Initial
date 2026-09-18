@@ -1,0 +1,28 @@
+flowchart TB
+    teacher[Teacher trend dashboard]
+    student[Student remediation view]
+    input[CSV / JSON attempts<br/>Synthetic pilot data]
+    orch[Orchestration layer<br/>MCP client, sequencing, partial results]
+    teacher <-->|Requests and summaries| orch
+    student <-->|Requests and exercises| orch
+    input --> orch
+    subgraph MCP[FastMCP server - four independently callable tools]
+        trace[Trace collector<br/>Validate and version]
+        score[Divergence scorer<br/>Matched checkpoints and ensemble]
+        cluster[Misconception clusterer<br/>Semantic groups with evidence]
+        remediate[Remediation agent<br/>Cluster-specific RAG]
+        trace --> score --> cluster --> remediate
+    end
+    orch <-->|Tool calls and typed results| MCP
+    db[(SQLite<br/>Canonical versioned attempts)]
+    encoder[Open-source sentence encoder]
+    vectors[(Chroma<br/>Attempt embedding collection)]
+    resources[Curated resources<br/>Separate resource embedding collection]
+    trace --> db
+    db --> score
+    trace --> encoder --> vectors
+    vectors --> cluster
+    db --> cluster
+    resources --> remediate
+    note[Target architecture: integrations remain to implement.<br/>At least 3 paired checkpoints; synthetic data; redacted logs.]
+    MCP --- note

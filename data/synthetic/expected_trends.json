@@ -1,0 +1,22 @@
+{
+  "demo-widening": {
+    "skill_id": "python.loops",
+    "expected_status": "widening",
+    "paired_checkpoints": 3
+  },
+  "demo-narrowing": {
+    "skill_id": "python.loops",
+    "expected_status": "narrowing",
+    "paired_checkpoints": 3
+  },
+  "demo-stable": {
+    "skill_id": "python.loops",
+    "expected_status": "stable",
+    "paired_checkpoints": 3
+  },
+  "demo-sparse": {
+    "skill_id": "python.loops",
+    "expected_status": "insufficient_data",
+    "paired_checkpoints": 2
+  }
+}
