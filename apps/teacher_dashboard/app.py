@@ -48,12 +48,17 @@ if st.session_state.seeded and st.button("Run analysis"):
     st.write(trend.explanation)
 
     if trend.checkpoints:
-        chart = {
-            "assisted": [c.assisted_score for c in trend.checkpoints],
-            "unassisted": [c.unassisted_score for c in trend.checkpoints],
-            "gap": [c.gap for c in trend.checkpoints],
-        }
-        st.line_chart(chart, x=[c.checkpoint_id for c in trend.checkpoints])
+        import pandas as pd
+
+        chart = pd.DataFrame(
+            {
+                "assisted": [c.assisted_score for c in trend.checkpoints],
+                "unassisted": [c.unassisted_score for c in trend.checkpoints],
+                "gap": [c.gap for c in trend.checkpoints],
+            },
+            index=[c.checkpoint_id for c in trend.checkpoints],
+        )
+        st.line_chart(chart)
         st.dataframe(
             [
                 {
