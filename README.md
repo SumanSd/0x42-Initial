@@ -3,10 +3,12 @@
 A collaborative starter for tracking the difference between assisted and
 unassisted student performance across time, based on the submitted proposal.
 
-**Status: project skeleton.** Four agent interfaces and MCP registrations exist;
-agent algorithms, persistence, orchestration, and UI data integration are not
-implemented. The two UI entry points display clearly labeled starter pages.
-No AI-use detection, real student assessment, or trained scoring is provided.
+**Status: working synthetic MVP.** All four agents are implemented with
+dependency-free local adapters (SQLite trace store, hashed n-gram encoder,
+gap-trend scorer, semantic clustering, curated-resource RAG) and both UIs run
+the full seeded journey. See [RUN.md](RUN.md) for how to run. This is a
+demonstration on synthetic data: no AI-use detection, real student assessment,
+or trained scoring is provided.
 
 ![Target project architecture](docs/diagrams/architecture.png)
 

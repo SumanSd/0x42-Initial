@@ -93,8 +93,44 @@ def main():
         "orchestration.pipeline", "storage.interfaces", "embeddings.interfaces",
     ):
         importlib.import_module("skill_erosion." + module)
-    print(f"PASS: {len(records)} synthetic records, {len(histories)} scenarios, CSV/JSON parity, resources and core imports.")
-    print("This checks scaffold integrity, not agent behavior or model accuracy.")
+    print(f"PASS fixtures: {len(records)} records, {len(histories)} scenarios, CSV/JSON parity, resources, imports.")
+
+    import asyncio
+    import os
+    import tempfile
+
+    with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp:
+        os.environ["SKILL_EROSION_DB"] = str(Path(tmp) / "behavior.sqlite3")
+        from skill_erosion.agents.trace_collector.agent import collect_traces
+        from skill_erosion.data import load_synthetic_attempts
+        from skill_erosion.orchestration.pipeline import run_journey
+
+        attempts = load_synthetic_attempts()
+        first = collect_traces(attempts)
+        require(collect_traces(attempts) == first, "Reimport must be an idempotent no-op")
+        conflict = Attempt(**{**records[0], "correctness": 0.01})
+        try:
+            collect_traces([conflict])
+        except ValueError:
+            pass
+        else:
+            raise ValueError("Conflicting version payload must be rejected")
+        for student, meta in expected.items():
+            result = asyncio.run(run_journey(None, student, meta["skill_id"]))
+            require(result.trend.status == meta["expected_status"], f"Journey status mismatch for {student}")
+            require(
+                len(result.trend.checkpoints) == meta["paired_checkpoints"],
+                f"Journey checkpoint mismatch for {student}",
+            )
+            if meta["expected_status"] == "widening":
+                require(result.clusters, "Widening scenario must produce a cluster")
+                require(result.remediation[0].status == "ready", "Widening plan must be ready")
+                require(result.remediation[0].resource_ids == ["loops-boundaries-01"], "Wrong resource")
+        from skill_erosion.storage import default_repository
+
+        default_repository().close()
+        default_repository.cache_clear()
+    print("PASS behavior: journeys match expected trends, idempotent ingestion, conflict rejection, remediation ready.")
 
 
 if __name__ == "__main__":
